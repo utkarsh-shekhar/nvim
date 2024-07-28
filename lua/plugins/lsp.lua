@@ -27,12 +27,12 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "jsonls", -- json
-		"tsserver", -- js
-		"pylsp", -- python
+                "tsserver", -- js
+                "pylsp", -- python
                 "lua_ls", -- lua
                 "gopls", -- go
                 "yamlls", -- yaml
-		"marksman", -- markdown
+                "marksman", -- markdown
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -92,8 +92,8 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
-                { name = 'buffer' },
-            })
+                    { name = 'buffer' },
+                })
         })
 
         vim.diagnostic.config({
