@@ -71,6 +71,25 @@ return {
                         }
                     }
                 end,
+                ["pylsp"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pylsp.setup {
+                        capabilities = capabilities,
+                        settings = {
+                            pylsp = {
+                                plugins = {
+                                    pycodestyle = {
+                                        enabled = true,
+                                        ignore = {
+                                            "E501", -- line length exceeded
+                                            "E261", -- 2 spaces before start of inline comment
+                                        }
+                                    },
+                                }
+                            }
+                        }
+                    }
+                end,
             }
         })
 
