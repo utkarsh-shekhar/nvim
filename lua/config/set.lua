@@ -30,3 +30,5 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "125"
 
+-- required for avante.lua
+vim.opt.laststatus = 3
